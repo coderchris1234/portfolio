@@ -37,7 +37,7 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
                     <p>
-                        Hi there!  I am a frontend developer with 2 years of experience in the industry. My passion for web development started during my college years where I discovered the power of creating beautiful and functional web pages.
+                        Hi there!  I am a frontend developer with 3 years of experience in the industry. My passion for web development started during my college years where I discovered the power of creating beautiful and functional web pages.
 
                         Over the years , I have gained extensive knowledge in HTML, CSS, JavaScript, and other frontend technologies. I am experienced in developing responsive websites, web applications, and e-commerce platforms. I am
                         currently learning frontend framwork reactjs.
@@ -50,20 +50,49 @@
                     </p>
 
                     <div class="tab-titles">
-                        <div class="tab-links active-link">Skills</div>
-                        <div class="tab-links">Experience</div>
-                        <div class="tab-links">Education</div>
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Frontend</span><br>Developing Web/App interfaces</li>
                             <li><span>Web development</span><br>Developing Web interfaces</li>
+                            <li><span>JavaScript developer</span><br>Developing intaractive Web/App applications</li>
                         </ul>
                     </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-current</span><br>frontend development trainer at altschool africa</li>
+                            <li><span>2019-2020</span><br>Frontend developer intern at techlab</li>
+                            <li><span>2017-2019</span><br>Developing Freelancer developer at upwork</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017-2020</span><br>Computer science at university of nigeria nsukka</li>
+                            <li><span>2014-2017</span><br>Computer science at federal polytechnic nassarawa</li>
+                        </ul>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
 </body>
 </html>
