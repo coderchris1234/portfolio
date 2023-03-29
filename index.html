@@ -22,7 +22,7 @@
                 </ul>
             </nav>
             <div class="header-text">
-                <p>Frontend developer</p>
+                <p> I'm a <span class="auto-typed"></span></p>
                 <h1>Hi, i'm <span class="name">Christobel</span><br> Nwachukwu from Nigeria</h1>
             </div>
         </div>
@@ -106,8 +106,17 @@
                             JavaScript is the backbone of modern web development, and I'm here to help you harness its power. From dynamic front-end interfaces to complex back-end functionality, I specialize in creating custom solutions that bring your ideas to life. With my deep understanding of JavaScript frameworks like React and Angular, as well as my experience in developing web applications from scratch, I have the skills you need to take your project to the next level. Let's work together to build something amazing.
                         </p>
                 </div>
+
+                <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
         
     <script>
+
+           var typed = new Typed(".auto-typed", {
+            strings: ["Frontend developer", "Web developer", "Javascript developer"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
 
         var tablinks = document.getElementsByClassName("tab-links")
         var tabcontents = document.getElementsByClassName("tab-contents")
